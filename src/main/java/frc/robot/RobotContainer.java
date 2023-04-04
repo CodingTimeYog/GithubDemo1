@@ -25,8 +25,7 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
  */
 public class RobotContainer {
   // The driver's controller
-  private final CommandXboxController m_driverController =
-      new CommandXboxController(OIConstants.kDriverControllerPort);
+  private final CommandXboxController m_driverController =  new CommandXboxController(OIConstants.kDriverControllerPort);
 
   // A few commands that do nothing, but will demonstrate the scheduler functionality
   private final CommandBase m_instantCommand1 = new InstantCommand();
