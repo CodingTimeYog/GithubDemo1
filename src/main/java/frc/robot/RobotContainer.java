@@ -44,17 +44,17 @@ public class RobotContainer {
         .onCommandInitialize(
             command ->
                 Shuffleboard.addEventMarker(
-                    "Command initialized", command.getName(), EventImportance.kNormal));
+                    "Command initialized", command.getName(), EventImportance.kCritical));
     CommandScheduler.getInstance()
         .onCommandInterrupt(
             command ->
                 Shuffleboard.addEventMarker(
-                    "Command interrupted", command.getName(), EventImportance.kNormal));
+                    "Command interrupted", command.getName(), EventImportance.kLow));
     CommandScheduler.getInstance()
         .onCommandFinish(
             command ->
                 Shuffleboard.addEventMarker(
-                    "Command finished", command.getName(), EventImportance.kNormal));
+                    "Command finished", command.getName(), EventImportance.kHigh));
 
     // Configure the button bindings
     configureButtonBindings();
